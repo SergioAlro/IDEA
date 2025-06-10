@@ -1,10 +1,10 @@
-# 🧪 Test Seeder – Preguntas Tipo Test
+# Test Seeder – Preguntas Tipo Test
 
 Este módulo tiene como objetivo poblar la base de datos con **preguntas tipo test** utilizando datos simulados (mockeados). Es útil para propósitos de desarrollo, pruebas o demostraciones del sistema de evaluación.
 
 ---
 
-## 📋 Contenido generado
+## Contenido generado
 
 El script inserta datos en las siguientes tablas:
 
@@ -13,7 +13,7 @@ El script inserta datos en las siguientes tablas:
 
 ---
 
-## 🚀 Ejecución
+## Ejecución
 
 ### Prerrequisitos
 
@@ -21,4 +21,4 @@ El script inserta datos en las siguientes tablas:
 - Acceso a un entorno Python con las siguientes librerías instaladas (si aplica):
 
 ```bash
-pip install Faker SQLAlchemy
+pip install SQLAlchemy
