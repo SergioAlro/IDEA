@@ -11,6 +11,7 @@ def set_page(page: str):
 def main_menu():
     st.title("IDEA")
     st.header("Menú principal")
+
     if st.button("Generar Examen", key="test_btn", help="Generar test"):
         set_page("test")
         st.experimental_rerun()
@@ -110,6 +111,7 @@ def test_page():
     if st.button("Volver", key="back_test"):
         set_page("menu")
         st.experimental_rerun()
+
 
     if "generated_test" not in st.session_state:
         st.session_state.generated_test = []

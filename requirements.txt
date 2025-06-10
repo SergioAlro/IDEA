@@ -1,6 +1,6 @@
 fastapi
 sqlalchemy
 uvicorn
-
 streamlit
 requests
+httpx
