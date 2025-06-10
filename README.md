@@ -26,4 +26,3 @@ python3 tests/seed_questions.py
 
 Esto creará el archivo `database/questions.db` (ignorado en Git) y
 poblará su contenido con datos de ejemplo.
-
