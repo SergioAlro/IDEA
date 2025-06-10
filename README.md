@@ -29,6 +29,17 @@ Ejecuta la interfaz de ejemplo con:
 ```bash
 streamlit run frontend/main.py
 ```
+
+## Backend
+
+Inicia la API desde la carpeta `backend`:
+
+```bash
+cd backend && uvicorn main:app --reload
+```
+
+El archivo `database/questions.db` se creará automáticamente la primera vez que se ejecute la aplicación.
+
 =======
 ## Relleno de la base de datos
 
@@ -42,4 +53,5 @@ python3 tests/seed_questions.py
 
 Esto creará el archivo `database/questions.db` (ignorado en Git) y
 poblará su contenido con datos de ejemplo.
+Si el archivo no existe, también se generará automáticamente al arrancar el backend.
 
