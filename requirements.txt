@@ -3,5 +3,4 @@ sqlalchemy
 uvicorn
 streamlit
 requests
-
 httpx

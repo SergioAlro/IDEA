@@ -11,16 +11,10 @@ def set_page(page: str):
 def main_menu():
     st.title("IDEA")
     st.header("Menú principal")
-    st.write("Seleccione una opción")
-    col1, col2 = st.columns(2)
-    with col1:
-        if st.button("Administrar preguntas", key="admin_btn", help="Ir a crud"):
-            set_page("admin")
-            st.experimental_rerun()
-    with col2:
-        if st.button("Generar examen", key="test_btn", help="Generar test"):
-            set_page("test")
-            st.experimental_rerun()
+
+    if st.button("Generar Examen", key="test_btn", help="Generar test"):
+        set_page("test")
+        st.experimental_rerun()
 
 
 def admin_page():
@@ -118,15 +112,33 @@ def test_page():
         set_page("menu")
         st.experimental_rerun()
 
-    n = st.number_input("Número de preguntas", min_value=1, step=1)
+
+    if "generated_test" not in st.session_state:
+        st.session_state.generated_test = []
+
+    n = st.number_input("Número de preguntas", min_value=1, step=1, key="num_questions")
     if st.button("Generar", key="generate_btn"):
         r = requests.get(f"{API_URL}/generar_test/", params={"preguntas": int(n)})
         if r.ok:
-            data = r.json()
-            for p in data:
-                st.write(p['pregunta'])
+            st.session_state.generated_test = r.json()
         else:
             st.error("Error al generar examen")
+
+    for idx, p in enumerate(st.session_state.generated_test):
+        st.subheader(f"{idx + 1}. {p['pregunta']}")
+        opciones = {
+            "A": p['opcion_a'],
+            "B": p['opcion_b'],
+            "C": p['opcion_c'],
+            "D": p['opcion_d'],
+        }
+        st.radio(
+            "Seleccione la respuesta correcta",
+            list(opciones.keys()),
+            format_func=lambda x: f"{x}. {opciones[x]}",
+            key=f"respuesta_{idx}",
+            index=None,
+        )
 
 
 def main():

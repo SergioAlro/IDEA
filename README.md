@@ -21,6 +21,7 @@ Cada carpeta contiene un `README.md` descriptivo que puede ampliarse a medida qu
 
 Instala las dependencias del proyecto ejecutando:
 
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -67,3 +68,4 @@ Para ejecutar la suite de tests utiliza:
 ```bash
 pytest
 ```
+
