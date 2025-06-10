@@ -21,7 +21,6 @@ Cada carpeta contiene un `README.md` descriptivo que puede ampliarse a medida qu
 
 Instala las dependencias del proyecto ejecutando:
 
-
 ```bash
 pip install -r requirements.txt
 ```
@@ -32,18 +31,21 @@ Ejecuta la interfaz de ejemplo con:
 ```bash
 streamlit run frontend/main.py
 ```
-=======
 
 ## Relleno de la base de datos
 
-En la carpeta `tests` se incluye el script `seed_questions.py` que genera una base
-de datos SQLite con 100 preguntas de ingeniería informática. Para poblar la
-tabla `preguntas` basta con ejecutar:
+En la carpeta `tests` se incluye el script `seed_questions.py` que genera una base de datos SQLite con 100 preguntas de ingeniería informática. Para poblar la tabla `preguntas` basta con ejecutar:
 
 ```bash
 python3 tests/seed_questions.py
 ```
 
-Esto creará el archivo `database/questions.db` (ignorado en Git) y
-poblará su contenido con datos de ejemplo.
+Esto creará el archivo `database/questions.db` (ignorado en Git) y poblará su contenido con datos de ejemplo.
 
+## Pruebas
+
+Para ejecutar la suite de tests utiliza:
+
+```bash
+pytest
+```
