@@ -14,6 +14,14 @@ IDEA es una plataforma gratuita y de código abierto para la creación, personal
 
 Cada carpeta contiene un `README.md` descriptivo que puede ampliarse a medida que se desarrollen los distintos módulos.
 
+## Instalación
+
+Instala las dependencias del proyecto ejecutando:
+
+```bash
+pip install -r requirements.txt
+```
+
 ## Relleno de la base de datos
 
 En la carpeta `tests` se incluye el script `seed_questions.py` que genera una base
@@ -26,3 +34,4 @@ python3 tests/seed_questions.py
 
 Esto creará el archivo `database/questions.db` (ignorado en Git) y
 poblará su contenido con datos de ejemplo.
+
