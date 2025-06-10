@@ -30,6 +30,7 @@ Ejecuta la interfaz de ejemplo con:
 streamlit run frontend/main.py
 ```
 =======
+
 ## Relleno de la base de datos
 
 En la carpeta `tests` se incluye el script `seed_questions.py` que genera una base
