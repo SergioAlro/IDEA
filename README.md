@@ -15,3 +15,11 @@ IDEA es una plataforma gratuita y de código abierto para la creación, personal
 
 Cada carpeta contiene un `README.md` descriptivo que puede ampliarse a medida que se desarrollen los distintos módulos.
 
+## Instalación
+
+Instala las dependencias del proyecto ejecutando:
+
+```bash
+pip install -r requirements.txt
+```
+
