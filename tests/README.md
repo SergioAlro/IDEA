@@ -1,3 +1,8 @@
+
+# Tests
+
+Pruebas automatizadas del proyecto.
+
 # Test Seeder – Preguntas Tipo Test
 
 Este módulo tiene como objetivo poblar la base de datos con **preguntas tipo test** utilizando datos simulados (mockeados). Es útil para propósitos de desarrollo, pruebas o demostraciones del sistema de evaluación.
