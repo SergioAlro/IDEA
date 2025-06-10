@@ -18,10 +18,18 @@ Cada carpeta contiene un `README.md` descriptivo que puede ampliarse a medida qu
 
 Instala las dependencias del proyecto ejecutando:
 
+
 ```bash
 pip install -r requirements.txt
 ```
 
+## Frontend
+
+Ejecuta la interfaz de ejemplo con:
+```bash
+streamlit run frontend/main.py
+```
+=======
 ## Relleno de la base de datos
 
 En la carpeta `tests` se incluye el script `seed_questions.py` que genera una base
