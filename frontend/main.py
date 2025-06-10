@@ -11,6 +11,7 @@ def set_page(page: str):
 def main_menu():
     st.title("IDEA")
     st.header("Menú principal")
+
     st.write("Seleccione una opción")
     col1, col2 = st.columns(2)
     with col1:
@@ -118,6 +119,7 @@ def test_page():
         set_page("menu")
         st.experimental_rerun()
 
+
     if "generated_test" not in st.session_state:
         st.session_state.generated_test = []
 
@@ -145,6 +147,7 @@ def test_page():
             index=None,
         )
 
+
     if st.session_state.generated_test:
         if st.button("Corregir", key="grade_btn"):
             total = len(st.session_state.generated_test)
@@ -166,6 +169,7 @@ def test_page():
                     correctas += 1
 
             st.success(f"Has acertado {correctas} de {total} preguntas")
+
 
 
 def main():
