@@ -12,9 +12,16 @@ def main_menu():
     st.title("IDEA")
     st.header("Menú principal")
 
-    if st.button("Generar Examen", key="test_btn", help="Generar test"):
-        set_page("test")
-        st.experimental_rerun()
+    st.write("Seleccione una opción")
+    col1, col2 = st.columns(2)
+    with col1:
+        if st.button("Administrar preguntas", key="admin_btn", help="Ir a crud"):
+            set_page("admin")
+            st.experimental_rerun()
+    with col2:
+        if st.button("Generar examen", key="test_btn", help="Generar test"):
+            set_page("test")
+            st.experimental_rerun()
 
 
 def admin_page():
@@ -139,6 +146,30 @@ def test_page():
             key=f"respuesta_{idx}",
             index=None,
         )
+
+
+    if st.session_state.generated_test:
+        if st.button("Corregir", key="grade_btn"):
+            total = len(st.session_state.generated_test)
+            correctas = 0
+
+            for idx, p in enumerate(st.session_state.generated_test):
+                seleccion = st.session_state.get(f"respuesta_{idx}")
+                if seleccion is None:
+                    st.error("Seleccione todas las respuestas antes de corregir")
+                    return
+
+            for idx, p in enumerate(st.session_state.generated_test):
+                seleccion = st.session_state.get(f"respuesta_{idx}")
+                correcta = p['resultado']
+                st.write(f"{idx + 1}. {p['pregunta']}")
+                st.write(f"Tu respuesta: {seleccion}")
+                st.write(f"Respuesta correcta: {correcta}")
+                if seleccion == correcta:
+                    correctas += 1
+
+            st.success(f"Has acertado {correctas} de {total} preguntas")
+
 
 
 def main():

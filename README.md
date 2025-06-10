@@ -33,7 +33,6 @@ Ejecuta la interfaz de ejemplo con:
 streamlit run frontend/main.py
 ```
 
-
 ## Backend
 
 Inicia la API desde la carpeta `backend`:
@@ -68,4 +67,5 @@ Para ejecutar la suite de tests utiliza:
 ```bash
 pytest
 ```
+
 
