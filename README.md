@@ -1,5 +1,6 @@
 # IDEA
 
+
 IDEA es una plataforma gratuita y de código abierto para la creación, personalización y administración de exámenes en tiempo real. Está pensada para docentes y estudiantes, permitiendo generar pruebas sin límite de participantes e integrando funciones de inteligencia artificial, gamificación y análisis de resultados. Además, se puede integrar con Moodle, lo que facilita su adopción en diversos contextos educativos.
 
 ## Carpetas principales

@@ -2,6 +2,7 @@
 
 Scripts de migración y configuraciones de la base de datos.
 
+
 El archivo `schema.sql` crea la tabla `preguntas` con los siguientes campos:
 
 - `pregunta`
@@ -10,3 +11,4 @@ El archivo `schema.sql` crea la tabla `preguntas` con los siguientes campos:
 - `opcion_c`
 - `opcion_d`
 - `resultado`
+
